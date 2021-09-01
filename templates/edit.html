@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task</title>
+</head>
+<body>
+
+<div class="card">
+    <div class="card-header" style="background-color:black">
+        <h5 class="card-title" style="color:white" align="center">TASK UPDATE</h5>
+    </div>
+    <div class="card-body">
+
+<form method="post">
+    {% csrf_token %}
+   {{form.as_p}}
+    <input type="submit" value="Update" class="btn btn-success">
+</form>
+
+    </div>
+</div>
+</body>
+</html>
+{% endblock %}
